@@ -1,6 +1,5 @@
 # 백엔드로드맵
-참고링크
-[백엔드 개발자 로드맵](https://roadmap.sh/backend)
+📝[백엔드 개발자 로드맵](https://roadmap.sh/backend)
 
 ![roadMap image](./images/backendRoadMap.png)
 
