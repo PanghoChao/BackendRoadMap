@@ -30,7 +30,7 @@ cmd에서 nslookup 명령어를 통해 해당 url의 ip주소를 알 수 있다.
 
 ## DNS의 작동원리
  총 8과정으로 예를 들어보자 
- <p align="center"><img src = "../images/1.Internet/4-3.DNSOperationProcess.png" width=60% height="60%"/></p>
+ <p align="center"><img src = "../images/1.Internet/4-3.DNSOperationProcess.png" width=100% height="100%"/></p>
 
  1. 웹브라우저에서 www.naver.com을 입력하면 먼저 LocalDNS에게  IP 주소를 질의하여,   
     Local DNS에 없으면 다른 DNS name 서버 정보를 받는다.(Root DNS 정보 전달 받음)
@@ -47,7 +47,9 @@ cmd에서 nslookup 명령어를 통해 해당 url의 ip주소를 알 수 있다.
  
 <br></br>
 
- <p align="center"><img src = "../images/1.Internet/4-4.TLDstructure.jpg" width=60% height="60%"/></p>
+### TLD의 구조
+ <p align="center"><img src = "../images/1.Internet/4-4.TLDstructure.jpg" width=100% height="100%"/></p>
+
 
 
 
