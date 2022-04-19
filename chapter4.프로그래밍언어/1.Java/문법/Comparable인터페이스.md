@@ -42,17 +42,31 @@ Comparable 인터페이스는 **객체를 정렬**하는 데 사용되는 메소
 - Comparable01.java
 						    
 ```
- public class Comparable01 {
+public class Comparable01 {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Car car01 = new Car("아반떼", 2016, "노란색")
-        Car car02 = new Car("소나타", 2010, "흰색");
+		Car car01 = new Car("아반떼", 2016, "노란색");
+		Car car02 = new Car("소나타", 2010, "흰색");
+		Car car03 = new Car("K5", 2014, "회색");
+		Car car04 = new Car("티볼리", 2012, "파란색");
+		Car car05 = new Car("제네시스", 2020, "검은색");
+		Car[] arr = { car01, car02, car03, car04, car05 };
 
-        System.out.println(car01.compareTo(car02));  // 1출력
-    }
-}                                       
+		Arrays.sort(arr); // 오름차순 정렬
+		for (Car c : arr) {
+			System.out.println("[ " + c.getModel() + "] ");
+		}
+		System.out.println("--------경계선--------- ");
+
+		Arrays.sort(arr, Collections.reverseOrder()); // 내림차순 정렬
+		for (Car c : arr) {
+			System.out.println("[ " + c.getModel() + "] ");
+		}
+	}
+}                              
 ```                                    
 - int comparaTo(T o) 단 하나의 추상메소드를 가지고 있다.
-						    
+- 결과값
+<img src = "../images/4.ProgrammingLanguage/1.Java/Grammer/comparableResult.png">						    
 						   
