@@ -68,5 +68,5 @@ public class Comparable01 {
 ```                                    
 - int comparaTo(T o) 단 하나의 추상메소드를 가지고 있다.
 - 결과값
-<img src = "../images/4.ProgrammingLanguage/1.Java/Grammer/comparableResult.png">						    
+<img src = "../../../images/4.ProgrammingLanguage/1.Java/Grammer/comparableResult.png">						    
 						   
