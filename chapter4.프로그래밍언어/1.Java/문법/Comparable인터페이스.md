@@ -6,7 +6,7 @@ Comparable 인터페이스는 **객체를 정렬**하는 데 사용되는 메소
 - 이때 기본 정렬 순서는 작은 값에서 큰 값으로 정렬되는 오름차순이 됩니다.
   
 ### 예시
-  -  Car.java
+-  Car.java
   ```
   public class Car implements Comparable<Car> {
 	private String modelName;
@@ -38,7 +38,7 @@ Comparable 인터페이스는 **객체를 정렬**하는 데 사용되는 메소
 }
 
   ```
-  - Comparable01.java
+- Comparable01.java
   ```
  public class Comparable01 {
 
@@ -50,8 +50,7 @@ Comparable 인터페이스는 **객체를 정렬**하는 데 사용되는 메소
         System.out.println(car01.compareTo(car02));  // 1출력
     }
 }                                       
-```
-                                      
-                                        
-- ㅇ
-                                        
+```                                    
+- int comparaTo(T o) 단 하나의 추상메소드를 가지고 있다.
+						    
+						   
