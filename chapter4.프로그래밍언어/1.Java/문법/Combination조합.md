@@ -79,3 +79,26 @@ public class Combination {
  - 위와같이 뽑을려면, 기본적으로 현재 인덱스보다 작아지면 안된다는 것을 알 수 있다.
  - 그리고, 조합은 한번 뽑으면 r의 갯수를 하나 줄여줘도 된다.(r==0일때 출력해주면 됨)
  
+### 재귀로 구현_visited사용
+```
+	public static void combination(int[] arr, boolean[] visited ,int depth, int n, int r) {
+		if(r==0) {
+			System.out.println(Arrays.toString(visited));
+			return;
+		}
+		if(depth == n) {
+			return;
+		}
+		visited[depth] = true;
+		combination(arr, visited ,depth + 1, n, r-1);
+		
+		visited[depth] = false;
+		combination(arr, visited ,depth + 1, n, r);
+	}
+}
+
+```
+
+### index사용
+
+ 
