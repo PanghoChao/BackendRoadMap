@@ -127,3 +127,25 @@ list.stream().mapToInt(i -> i).toArray(); // 자동 Wrapper 작동
 ```
 위와같이 stream에서 mapToInt를 사용하여 Object를 primitive타입으로 변환해주고 
   toArray()를 통하여 배열로 변환해줄 수 있다.
+
+	
+## 정렬(sort)메소드 
+- 변환 만큼이나 헤깔리는 것이 해당 데이터 그룹을 정렬 할때 이다.
+- 확실하게 헤깔리지 않을라면 명확히 짚고 넘어가야한다. 
+### 오름차순 정렬
+#### 배열일때에는 Arrays.sort()사용
+#### 리스트일때에는 Collections.sort()사용
+
+	
+### 내림차순 정렬
+
+#### 배열일때에는 Arrays.sort(,Collections.reverseOrder())사용
+	- Arrays 에는 아쉽게도 내부적으로 내림차순 정렬하는 메소드를 가지고 있지않다. 
+  - 그래서 Collections에서 불러와야한다. 
+#### 리스트일때에는 Collections.reverse()사용	
+	- reverse()도 가지고 있다.
+  
+추가적으로 두 객체간 비교가 필요할 때는 implements Comparable{} 을 선언하여 
+  ComepareTO() 메소드를 설정해주면 가능하다.    
+  [참고 링크](chapter4.프로그래밍언어/1.Java/문법/Comparable인터페이스.md)
+	
