@@ -89,8 +89,9 @@ for(int i : intArr) {
 	intList.add(i); //자동으로 wrap해준다.
 }
 
-```  
-    - primitive타입은 Arrays.asList()를 사용할 수 없으나 반복문을 통해 변환할 수 있다.
+```
+	
+ 	- primitive타입은 Arrays.asList()를 사용할 수 없으나 반복문을 통해 변환할 수 있다.
 
 ### 2. primitive 타입 List -> Array
   
