@@ -31,3 +31,20 @@
 ## 서로 자료구조 변환 
 
 ### 1. Array -> List
+1. Arrays.asList()
+  - 이경우 , List의 값이 바뀌면, Array값도 같이 변한다.
+  - 그렇기 때문에 만약, List의 길이를 추가하게되면, 길이가 고정인 Array가 에러가 발생하게 된다.
+2. new ArrayList<>(Arrays.asList())
+  - 그래서 새로운 주소값을 할당해줘서, 서로 독립적이게 만들어준다.
+3. Collectors.toList()
+  - Stream().collect(Collectors.toList());
+  - stream을 활용한 변환방법이다.
+ 
+### 2. List -> Array
+1. toArray()
+ - String타입의 List에서 Array로 변환하는 경우 가능하다.
+```
+List명.toArray(new String[배열의 크기]);
+```
+2. 
+3. 
