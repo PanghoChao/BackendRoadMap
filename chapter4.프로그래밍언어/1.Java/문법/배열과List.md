@@ -147,5 +147,5 @@ list.stream().mapToInt(i -> i).toArray(); // 자동 Wrapper 작동
   
 추가적으로 두 객체간 비교가 필요할 때는 implements Comparable{} 을 선언하여 
   ComepareTO() 메소드를 설정해주면 가능하다.    
-  [참고 링크](chapter4.프로그래밍언어/1.Java/문법/Comparable인터페이스.md)
+  [참고 링크](https://github.com/PanghoChao/BackendRoadMap/blob/30748e73bd3ad9ed1d879eea633c727121e4aef5/chapter4.%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%96%B8%EC%96%B4/1.Java/%EB%AC%B8%EB%B2%95/Comparable%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)
 	
