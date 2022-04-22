@@ -28,12 +28,17 @@
 -  기본적으로 순차성을 보장하지 못하기 떄문에 special locality 보장이 되지않아 cache hit가 어렵다.
   -  spacial locality : 프로그램 실행 시 접근하는 메모리 영역은 이미 접근이 이루어진 영역의 근처일 확률이 높다는 프로그램 성격 표현
 - 언어별로 list지원하는 것이 다르다. 
+
 |언어|지원내용|
 |--|--|
 |C| 리스트 지원 안함|
 |Javascript|배열에 리스트기능이 포함되어 있음|
 |Python|기본이 리스트이며, 배열을 지원안함|
 |Java|배열과 리스트 모두 지원, ArrayList와 LinkedList로 나뉨|
+
+- 배열은 compile time에 할당되는 정적메모리에 할당되고, 리스트는 새로운 Node가 추가되는 runtime에 할당되는 동적메모리에 할당
+    - run time : 컴파일 과정을 마친 응용 프로그램이 사용자에 의해 실행될 때
+    - compile time : 소스코드가 컴파일을 통해 기계어 코드로 변환되어 실행 가능한 프로그램이 되는 편집 과정 
 
 
 
@@ -42,7 +47,7 @@
 # Collections 와 Arrays
 
 
-## 서로 자료구조 변환 
+## 서로 자료구조 변환 (Object타입)
 
 ### 1. Array -> List
 1. Arrays.asList()
@@ -60,5 +65,20 @@
 ```
 List명.toArray(new String[배열의 크기]);
 ```
-2. 
-3. 
+
+---
+  위의 경우 둘다 String[]과 List<String>인 경우만 가능하다.      
+  왜냐하면 문자열 배열과, 문자열리스트의 원소값은 String으로 동일하기 때문이다.     
+  <p></p>
+  하지만, int의 경우 int[] 와 List<Integer>가 되는데, 
+  이 경우는 int[]의 원소는 데이터 타입이 int로 primitive 타입이지만,    
+  List의 원소는 데이터 타입이 Integer로 Object타입이다.    
+  그래서 위와 같은 방법으로는 변환할 수가 없다. 
+<br></br>
+  
+### 1. primitive 타입 Array -> List
+  
+
+
+### 2. primitive 타입 List -> Array
+  
