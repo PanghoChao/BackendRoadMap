@@ -101,8 +101,9 @@ List<Integer>	intList = Arrays.stream(intArr).boxed().collect(Collectors.toList(
 ```
 ### 2. primitive 타입 List -> Array
 1. 반복문 
-	- 반대로도 반복문을 통해 변환해줄수 있지만, 그리 자주 사용되진 않는다. 
-	```
+  - 반대로도 반복문을 통해 변환해줄수 있지만, 그리 자주 사용되진 않는다. 
+
+```
 List<Integer> intList = new ArrayList<>();
 intList.add(1);
 intList.add(2);
@@ -114,6 +115,15 @@ for (int i = 0; i < intArr.length; i++) {
 	intArr[i] = intList.get(i);
 }
 System.out.println(Arrays.toString(intArr));
-	```
+```
+                                                     
+                                                     
+2. Stream 
+```
                                                     
-																							
+list.stream().mapToInt(Integer::intValue).toArray();     
+list.stream().mapToInt(i -> i).toArray(); // 자동 Wrapper 작동
+  
+```
+위와같이 stream에서 mapToInt를 사용하여 Object를 primitive타입으로 변환해주고 
+  toArray()를 통하여 배열로 변환해줄 수 있다.
