@@ -77,6 +77,7 @@ List명.toArray(new String[배열의 크기]);
 <br></br>
   
 ### 1. primitive 타입 Array -> List
+	
 1. 반복문
  	- 위에서 언급에 알수 있듯이, int타입을 Integer로 바꿔주기만하면, 변환이 가능하다는 것이다. 
 	 - 그래서 반복을 통해 변환할 수 잇다. 
@@ -90,8 +91,29 @@ for(int i : intArr) {
 }
 
 ```
-	
- 	- primitive타입은 Arrays.asList()를 사용할 수 없으나 반복문을 통해 변환할 수 있다.
 
+ 	primitive타입은 Arrays.asList()를 사용할 수 없으나 반복문을 통해 변환할 수 있다.
+2. Stream 사용
+	- 반복문보다는 아마 실제론 Stream을 더 많이 사용할 것이다. 
+```
+int[] arr ={1, 2, 3}
+List<Integer>	intList = Arrays.stream(intArr).boxed().collect(Collectors.toList());	
+```
 ### 2. primitive 타입 List -> Array
-  
+1. 반복문 
+	- 반대로도 반복문을 통해 변환해줄수 있지만, 그리 자주 사용되진 않는다. 
+	```
+List<Integer> intList = new ArrayList<>();
+intList.add(1);
+intList.add(2);
+intList.add(3);
+
+int[] intArr = new int[intList.size()];
+
+for (int i = 0; i < intArr.length; i++) {
+	intArr[i] = intList.get(i);
+}
+System.out.println(Arrays.toString(intArr));
+	```
+                                                    
+																							
