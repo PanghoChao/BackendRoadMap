@@ -77,19 +77,20 @@ List명.toArray(new String[배열의 크기]);
 <br></br>
   
 ### 1. primitive 타입 Array -> List
- - 위에서 언급에 알수 있듯이, int타입을 Integer로 바꿔주기만하면, 변환이 가능하다는 것이다. 
- - 그래서 반복을 통해 변환할 수 잇다. 
+1. 반복문
+ 	- 위에서 언급에 알수 있듯이, int타입을 Integer로 바꿔주기만하면, 변환이 가능하다는 것이다. 
+	 - 그래서 반복을 통해 변환할 수 잇다. 
   
 ```
-  	List<Integer> intList = new ArrayList<>() ;
-		int[] intArr = {1,2,3};
-		
-		for(int i : intArr) {
-			intList.add(i);
-		}
-	
-```  
+List<Integer> intList = new ArrayList<>() ;
+int[] intArr = {1,2,3};
 
+for(int i : intArr) {
+	intList.add(i); //자동으로 wrap해준다.
+}
+
+```  
+      - primitive타입은 Arrays.asList()를 사용할 수 없으나 반복문을 통해 변환할 수 있다.
 
 ### 2. primitive 타입 List -> Array
   
