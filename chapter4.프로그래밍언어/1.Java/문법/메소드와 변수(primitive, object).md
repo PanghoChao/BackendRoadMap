@@ -61,9 +61,13 @@ Student s = new Student();
  - 크게 4가지로 나눌수 있다. 
     - 배열타입 : int[], char[], double[], boolen[] 등 
       - 기본타입을 인덱스에 맞춰 담을 수 있는 배열을 말한다.  
-    - 열거타입 :  collections타입 등
-      - List(stack, queue), Map, Set,  등이 있다. 
-    - 클래스 : class 클래스명 , enum 클래스명 등
-      - 보통 개발자가 직접 만들어 필요한 타입이 있는 경우 사용한다. 
-    - 인터페이스 : interface  
+    - 열거타입 : enum  
+    - 인터페이스 : collections 인터페이스 _ List<E>, set<E>, Map<E>
+      - 여기서 E는 오브젝트를 말한다.
       - 지정된 틀이 필요한 경우 사용한다.
+      - queue<E>
+    - 클래스 : collections 클래스, class 클래스명
+      - ArrayList, LinkedList, stack
+      - HashMap, HashSet
+      - 보통 개발자가 직접 만들어 필요한 타입이 있는 경우 사용한다. 
+   
