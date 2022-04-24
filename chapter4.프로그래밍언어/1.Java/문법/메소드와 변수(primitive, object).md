@@ -112,7 +112,7 @@ public class test{
       
   - 메소드안에서 생성한 기본데이터타입은 다른 메소드의 인자로 넣어 넘겨줘도, 해당 메소드에서는 값을 바꿀수가 없다.
   
-  <img>
+   <img src = "../../../images/4.ProgrammingLanguage/1.Java/Grammer/methodVariable.png" width= 70%>
   
 ---
 ### 2. main 메소드안에 참조타입(객체)변수 
@@ -141,9 +141,9 @@ public class test2{
     - 그렇기 때문에, 메소드에서 배열 내부값을 바꾸면 다른 메소드에도 영향이 가게된다.
     - 이것은 다른 참조타입(객체)도 동일하다.
   
-    <img>
+   <img src = "../../../images/4.ProgrammingLanguage/1.Java/Grammer/methodArray.png" width= 70%>
 
-  
+  ---
 ### 3. 전역변수
   - 그럼 자칫 참조타입의 역할이 전역변수와 헤깔릴수 있는데, 엄연히 다르다.
   - 전역변수의 경우 선언한 곳 안에서는 어디든지 불러올 수 있기 때문에, 굳이 인자로 넣어 줄 필요도 없다. 
@@ -166,7 +166,7 @@ public class test2{
 > 메소드 전용 전 전역 변수 : 4   
 > 메소드 안 전역 변수 : 5   
 > 메소드 전용 후 전역 변수 : 5   
-  
+   <img src = "../../../images/4.ProgrammingLanguage/1.Java/Grammer/methodGlobal.png" width= 70%>
   - 하지만, 이 방식은 어디에서든 접근이 가능한 것이기에 안정성이 떨어져, 확실한 경우가 아니라면 굳이 사용하지 않는 방법이기도 하다.
 
   
