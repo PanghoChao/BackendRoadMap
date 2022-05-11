@@ -5,7 +5,7 @@
   - 최대 힙 : 항상, 부모노드의 키값 > 자식노드의 키값     
   - 최소 힙 : 항항, 부모노드의 키값 < 자식노드의 키값
 - 키값의 대소관계는 오로지 부모노드와 자식노드 간에만 성립하며, 특히 **형제 사이에는 대소관계가 정해지지 않는다.**
-<p align =center><img src="/images/4.ProgrammingLanguage/1.Java/dataStructure/Heap_binaryHeap.png" width = 60%></p>
+<p align =center><img src="/images/4.ProgrammingLanguage/1.Java/dataStructure/Heap_binaryHeap.png" width = 40%></p>
 
 > `메모리`에도 `힙(Heap)` 이라는 명칭이 존재하지만, `자료구조` `힙(Heap)`과는 무관하니, 헤깔리지 않아야한다.
 
