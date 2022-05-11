@@ -1,2 +1,2 @@
-local repository - git
-Remote Repository - gitHub
+- local repository : git
+- Remote Repository : gitHub
