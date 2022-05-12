@@ -10,10 +10,20 @@
  - 높은 우선순위의 요소를 먼저 꺼내서 처리하는 구조
  - 시간 복잡도는 힙과 큐를 합친 O(Nlogn) 이다. 
  - 우선순위를 중요시해야 하는 상황에서 주로 쓰인다. 
-
+ - 특히, 주의해야할 사항이 있는데 우선순위 큐는 올림차순으로 설정하면, 가장 작은값부터 반환하고 내림차순으로 설정해야, 가장 큰값 부터 반환한다. 
+    - 그 이유는, 큐 특성상 맨 앞에부터 값을 반환하기 때문에, 맨앞이 가장 작은건 올림차순이고, 맨앞이 가장 큰건 내림차순이다. 
 
 ### 선언
-`import java.util.PriorityQueue` 로 선언해준다.
+`import java.util.PriorityQueue` 로 해당 패키지를 불러와야한다.
+
+1. `PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();`  
+    - 기본적으로 `PriorityQueue<>`클래스를 불러와 생성하면, **올림차순**으로 생성된다.
+    - 반환되는 값은 가장 작은값이 나온다.
+2. `PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());`
+    - `Collections.reverseOrder()`의 메소드를 도움받아 **내림차순**으로 생성된다.
+    - 반환되는 값이 가장 큰 값이 나온다.
+3. 
+
 
 
 ### Priority Queue 메소드
