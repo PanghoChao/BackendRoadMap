@@ -17,11 +17,15 @@
 
 
 ### Priority Queue 메소드
-
-- poll()
-- remove()
-- peek()
-- element()
-- clear()
+내부적으로란 Heap이고, 자료구조형태는 Queue라서 그런지, Queue와 참조메소드는 동일하다.
+- add(): 큐의 맨뒤에 값을 추가한다.  
+    - 반환값은 boolean으로 성공하면 True, 실패하면 false를 반환한다.
+- poll() : 큐의 맨앞에 있는 요소를 반환하고, 큐에서 해당 요소를 제거한다.
+    - 만약 큐가 비어있으면 null을 반환 
+- remove() : 인자에 아무런 값이 없으면 맨앞 요소를 삭제한다.
+    - 인자로 Object값을 넣으면 해당 요소가 삭제된다. 
+- peek() :  큐의 맨 앞에 있는 요소를 반환함.
+- element() :  큐의 맨 앞에 있는 요소를 반환함. 하지만, peek()를 더 많이 사용!
+- clear() : 큐안의 값을 다 제거한다.
 
 ### Priority Queue 복사하기, 초기화
