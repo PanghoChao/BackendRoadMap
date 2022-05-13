@@ -6,7 +6,7 @@
 - `PriorityQueue`는 자료구조 `Heap`을 이용하여 구현된다. [힙 참고자료](./Heap.md)   
 ### 상속관계 
  - priorityQueue는 Class이다.
-<img src ="">
+<img src ="/images/4.ProgrammingLanguage/1.Java/dataStructure/priorityQueue.png">
 
 ## 특징
  - 높은 우선순위의 요소를 먼저 꺼내서 처리하는 구조
