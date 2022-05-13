@@ -25,7 +25,7 @@
 ### 2. `PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collection<E> c);`  
    - 초기화 시 Collection Type을 넣을 수 있으며, Collection 안에있던 요소들을 PriorityQueue 안에 포함되어 생성된다.
    - 반환되는 값은 가장 작은값이 나온다.
-   - 실제로 복사가 되는지 테스트
+   - 실제로 복사가 되는지 테스트(혹시 참조하고 있을까봐)
 ```
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(5);
