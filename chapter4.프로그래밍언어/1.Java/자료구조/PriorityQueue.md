@@ -4,7 +4,9 @@
   - 이 말은 즉, `PriorityQueue`를 사용하기 위해선 우선순위를 정해줘야하는데,  그것을  `Comparable` 인터페이스로 구현해줄 수 있다.
   - comparable에 관해서는 이미 언급한 바에 있으니, 링크를 참조하자 [Comparable](../문법/Comparable인터페이스.md)
 - `PriorityQueue`는 자료구조 `Heap`을 이용하여 구현된다. [힙 참고자료](./Heap.md)   
-
+### 상속관계 
+ - priorityQueue는 Class이다.
+<img src ="">
 
 ## 특징
  - 높은 우선순위의 요소를 먼저 꺼내서 처리하는 구조
@@ -13,16 +15,46 @@
  - 특히, 주의해야할 사항이 있는데 우선순위 큐는 올림차순으로 설정하면, 가장 작은값부터 반환하고 내림차순으로 설정해야, 가장 큰값 부터 반환한다. 
     - 그 이유는, 큐 특성상 맨 앞에부터 값을 반환하기 때문에, 맨앞이 가장 작은건 올림차순이고, 맨앞이 가장 큰건 내림차순이다. 
 
-### 선언
+## 선언
 `import java.util.PriorityQueue` 로 해당 패키지를 불러와야한다.
 
-1. `PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();`  
-    - 기본적으로 `PriorityQueue<>`클래스를 불러와 생성하면, **올림차순**으로 생성된다.
-    - 반환되는 값은 가장 작은값이 나온다.
-2. `PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());`
-    - `Collections.reverseOrder()`의 메소드를 도움받아 **내림차순**으로 생성된다.
-    - 반환되는 값이 가장 큰 값이 나온다.
-3. 
+### 1. `PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();`  
+   - 아무런값 없이 생성을하면, 11개의 초기공간을 만들어놓는다. 
+   - 기본적으로 `PriorityQueue<>`클래스를 불러와 생성하면, **올림차순**으로 생성된다.
+   - 반환되는 값은 가장 작은값이 나온다.
+### 2. `PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Collection<E> c);`  
+   - 초기화 시 Collection Type을 넣을 수 있으며, Collection 안에있던 요소들을 PriorityQueue 안에 포함되어 생성된다.
+   - 반환되는 값은 가장 작은값이 나온다.
+   - 실제로 복사가 되는지 테스트
+```
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(5);
+        arrayList.add(4);
+        arrayList.add(3);
+        arrayList.add(2);
+        arrayList.add(1);   // arrayList = [5,4,3,2,1]
+
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>(arrayList);
+        
+        arrayList.set(4,2); // arrayList = [5,4,3,2,2]
+         
+        System.out.println(priorityQueue.peek());  // 1
+        System.out.println(priorityQueue); // priorityQueue = [1,2,3,5,4]
+```
+
+
+### 3. `PriorityQueue<Integer> priorityQueue = new PriorityQueue(int initialCapacity);`
+  - 올림차순으로, 입력한 int 수만큼 초기 공간을 만들고 PriorityQueue를 생성한다. 
+### 4. `PriorityQueue(int initialCapacity, Comparator<E> comparator);`
+  - 입력한 int 수만큼 초기 공간을 만들고 PriorityQueue를 생성한다.
+  - 그리고 Comparator에 맞춰 우선순위를 결정한다.
+### 5. `PriorityQueue(PriorityQueue<E> c)`
+  - PriorityQueue 자체를 넣어주면, 복사하여 생성한다.    
+### 6. `PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(SortedSet<E> c)`
+  - `SortedSet<E>`형식에 맞춰 priorityQueue가 정렬된다.
+  - 가장 대표적으로 오는 것이 `new PriorityQueue<>(Collections.reverseOrder());`
+  - `Collections.reverseOrder()`의 메소드를 도움받아 **내림차순**으로 생성된다.
+  - 반환되는 값이 가장 큰 값이 나온다.
 
 
 
@@ -38,4 +70,7 @@
 - element() :  큐의 맨 앞에 있는 요소를 반환함. 하지만, peek()를 더 많이 사용!
 - clear() : 큐안의 값을 다 제거한다.
 
-### Priority Queue 복사하기, 초기화
+### Priority Queue 참고자료 
+
+- geeksforgeeks [PriorityQueue in Java](https://www.geeksforgeeks.org/priority-queue-class-in-java/)
+- Oracle [Class PriorityQueue<E>](https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html)
